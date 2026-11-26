@@ -50,6 +50,21 @@ describe('012 Consequence Engine', () => {
     // With no accepted consequence there is no position: the edition states that explicitly
     if (r.status === 'drafted') expect(r.issue.content!.position).toBeNull();
   });
+  it('returns a "revise" consequence for one bounded revision round, then re-challenges it', async () => {
+    let n = 0;
+    const w = makeWorld({
+      pages: fixturePages(),
+      scripts: scripts({
+        'consequence.challenge': () => (n++ === 0 ? { verdict: 'revise', neutralHeadlineTest: 'Overstated.', findings: ['states inference as fact'] } : { verdict: 'pass', neutralHeadlineTest: 'Now follows.', findings: [] }),
+        'consequence.revise': (i) => ({ ...i.consequence, statement: `If price is the constraint, ${i.consequence.statement.toLowerCase()}` }),
+      }),
+    });
+    const r = await prepareEdition(w.ctx, w.publishing, opts);
+    const [c] = w.repo.listConsequences(r.run.id);
+    expect(c.status).toBe('accepted');
+    expect(c.statement).toMatch(/^If price is the constraint/);
+    expect(c.challenge!.findings).toContain('(passed after one revision round)');
+  });
 });
 
 describe('012 Position Engine', () => {

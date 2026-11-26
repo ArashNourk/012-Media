@@ -1,0 +1,42 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "judgements": [
+   {
+    "claimKey": "CLM-AD5A90C55B3D",
+    "verdict": "entails",
+    "note": "Closing announced; figures match."
+   },
+   {
+    "claimKey": "CLM-7DC175876F79",
+    "verdict": "entails",
+    "note": "Figures match."
+   },
+   {
+    "claimKey": "CLM-76EF0FFB46EF",
+    "verdict": "entails",
+    "note": "Matches."
+   },
+   {
+    "claimKey": "CLM-A00165C461F1",
+    "verdict": "entails",
+    "note": "Share count and all seven purchasers match."
+   },
+   {
+    "claimKey": "CLM-D436012596A2",
+    "verdict": "entails",
+    "note": "Price and aggregate match."
+   },
+   {
+    "claimKey": "CLM-E7F9F4277BD7",
+    "verdict": "entails",
+    "note": "Matches."
+   },
+   {
+    "claimKey": "CLM-DF9F7CDD1DEC",
+    "verdict": "entails",
+    "note": "Matches."
+   }
+  ]
+ }
+}

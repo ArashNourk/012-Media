@@ -159,3 +159,29 @@ ${i.claims.map((c) => `<claim id="${c.claimId}" type="${c.type}" eventState="${c
   maxTokens: 6000,
   effort: 'high',
 };
+
+// ------------------------------------------------------------ return for revision (bounded: one round)
+
+export interface ReviseInput {
+  consequence: z.infer<typeof SynthesizedConsequence>;
+  findings: string[];
+  claims: SignalForAnalysis['claims'];
+}
+
+export const REVISE: LlmTask<ReviseInput, z.infer<typeof SynthesizedConsequence>> = {
+  name: 'consequence.revise',
+  version: 'v1.0.0',
+  system: `${EVIDENCE_POLICY}
+
+Task (012 Consequence Engine — revision): the adversarial reviewer returned this consequence for revision. Address every finding without adding new facts: narrow claims to what the evidence supports, make conditional what is inference, keep or strengthen assumptions, alternatives and disconfirming indicators. If the consequence cannot be repaired, return it unchanged; it will be held.`,
+  render: (i) => `<consequence>${JSON.stringify(i.consequence)}</consequence>
+<findings>
+${i.findings.map((f) => `<finding>${f}</finding>`).join('\n')}
+</findings>
+<evidence>
+${i.claims.map((c) => `<claim id="${c.claimId}" type="${c.type}" eventState="${c.eventState}" support="${c.support}">${c.text}</claim>`).join('\n')}
+</evidence>`,
+  output: SynthesizedConsequence,
+  maxTokens: 8000,
+  effort: 'high',
+};

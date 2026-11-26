@@ -1,0 +1,20 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as adversarial reviewer in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — same session that drafted the candidates (reduced independence)",
+ "output": {
+  "findings": [
+   {
+    "category": "weak_demand_evidence",
+    "severity": "major",
+    "detail": "Nothing shows any vendor extends public-sector terms to commercial buyers."
+   },
+   {
+    "category": "causal_leap",
+    "severity": "major",
+    "detail": "\"Published concessions weaken list terms\" is asserted; vendors routinely segment government pricing."
+   }
+  ],
+  "verdict": "revise",
+  "decisiveObstacle": "Transferability of public-sector terms to commercial negotiations is unevidenced.",
+  "smallestNextTest": "Ask for comparable terms in two live renewals."
+ }
+}

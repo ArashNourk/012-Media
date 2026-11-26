@@ -1,0 +1,56 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "signalId": "SIG-301945596B4F",
+  "observedChange": "Anthropic offered every level of US government a 40% discount across Claude Enterprise, Claude for Government and the Claude API through a GSA agreement, with no minimum spend commitment.",
+  "affectedActors": [
+   {
+    "actor": "Federal agencies",
+    "incentive": "Lower cost and no commitment to start or expand use."
+   },
+   {
+    "actor": "State, local, tribal and territorial governments",
+    "incentive": "Access to the same discount."
+   },
+   {
+    "actor": "Systems integrators and resellers serving government",
+    "incentive": "Lower licence cost may shift budget towards implementation work (inference)."
+   },
+   {
+    "actor": "Competing AI vendors in public procurement",
+    "incentive": "Price pressure on government contracts (inference)."
+   }
+  ],
+  "causalChain": [
+   "A 40% discount across every product surface, with no minimum spend, available through GSA (observed).",
+   "The cost and commitment needed for an agency to start or widen use falls (inference).",
+   "More government pilots can move to wider use within existing budgets (inference).",
+   "Competing vendors face pressure to match terms in public procurement (inference)."
+  ],
+  "constraints": [
+   "Authorisation differs by product: Claude for Government is offered at FedRAMP High; Claude Enterprise is still in process for FedRAMP Moderate (observed).",
+   "Agency budgets and accreditation processes (inference)."
+  ],
+  "baseline": "Without the agreement, agencies would buy through standard procurement at list price, with adoption limited by budget and procurement timelines (inference).",
+  "shiftType": "incremental",
+  "firstOrderEffects": [
+   "Lower licence cost for government buyers.",
+   "One procurement route across all levels of government."
+  ],
+  "secondOrderEffects": [
+   "Price benchmark for AI in public procurement (inference).",
+   "Implementation work rather than licences becomes a larger share of government AI spend (inference)."
+  ],
+  "claimIdsUsed": [
+   "CLM-7F88BBDBB6D0",
+   "CLM-0AD19134AA8D",
+   "CLM-223ED7D401ED",
+   "CLM-55998EE5EDEA",
+   "CLM-EA87CD57C913",
+   "CLM-37894738BB3E",
+   "CLM-7D4A2A33BD9E",
+   "CLM-B13FD44256CC",
+   "CLM-A53F1F7D6030"
+  ]
+ }
+}

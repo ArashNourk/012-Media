@@ -1,0 +1,27 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "judgements": [
+   {
+    "claimKey": "CLM-CE608DAE5A7D",
+    "verdict": "partially_entails",
+    "note": "The excerpt highlights 20 partners within an expansion; the claim could be read as the programme now comprising exactly 20 partners."
+   },
+   {
+    "claimKey": "CLM-E02EC57C35C6",
+    "verdict": "entails",
+    "note": "Matches; future distribution."
+   },
+   {
+    "claimKey": "CLM-C747EADF8222",
+    "verdict": "entails",
+    "note": "Matches, including research-preview status."
+   },
+   {
+    "claimKey": "CLM-84D075A78BBE",
+    "verdict": "partially_entails",
+    "note": "Read alone the excerpt says 'the institute'; it does not name the Allen Institute."
+   }
+  ]
+ }
+}

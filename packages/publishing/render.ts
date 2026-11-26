@@ -56,11 +56,12 @@ export function renderIssueHtml(c: IssueContent, meta: RenderMeta): string {
 <meta name="author" content="012 MEDIA">
 <meta name="description" content="${esc(c.headline)}">
 <style>
-  @page { size: Letter; margin: 0; }
+  @page { size: Letter; margin: 0.45in 0 0.4in 0; }
   * { box-sizing: border-box; }
   html { background: ${BRAND.black}; }
   body { margin: 0; background: ${BRAND.black}; color: ${BRAND.white}; font-family: ${BRAND.font}; font-size: 10.5pt; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .page { max-width: 7.2in; margin: 0 auto; padding: 0.6in 0.55in 0.5in; }
+  .page { max-width: 7.2in; margin: 0 auto; padding: 0.15in 0.55in 0.1in; }
+  @media screen { .page { padding: 0.6in 0.55in 0.5in; } }
   a { color: ${BRAND.white}; text-decoration: underline; text-decoration-color: ${BRAND.rule}; text-underline-offset: 2px; }
   .masthead { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid ${BRAND.rule}; padding-bottom: 14pt; }
   .lockup { display: flex; align-items: center; gap: 12pt; }
@@ -74,10 +75,13 @@ export function renderIssueHtml(c: IssueContent, meta: RenderMeta): string {
   .lead { font-size: 11.5pt; color: #DADAD7; margin: 0 0 12pt; }
   .notes { border-left: 2px solid ${BRAND.rule}; padding: 2pt 0 2pt 10pt; color: ${BRAND.gray}; font-size: 8.5pt; margin: 10pt 0 4pt; }
   .notes p { margin: 2pt 0; }
+  section > h2 + * { break-before: avoid; }
   h2 { font-size: 8pt; letter-spacing: 2.6pt; font-weight: 700; margin: 24pt 0 8pt; padding-top: 10pt; border-top: 1px solid ${BRAND.rule}; text-transform: uppercase; break-after: avoid; }
   h2 .k { color: ${BRAND.magenta}; }
   h3 { font-size: 12pt; line-height: 1.3; font-weight: 600; margin: 12pt 0 3pt; break-after: avoid; }
-  .item { break-inside: avoid; margin-bottom: 10pt; }
+  .item { margin-bottom: 10pt; }
+  .item p, .item li, .grid dd { orphans: 3; widows: 3; }
+  .keep { break-inside: avoid; }
   .meta { font-size: 7.8pt; letter-spacing: .6pt; color: ${BRAND.gray}; text-transform: uppercase; margin-bottom: 4pt; }
   .meta .weak { color: ${BRAND.magenta}; }
   p { margin: 4pt 0; }
@@ -117,7 +121,7 @@ ${c.editorialNotes.length ? `<div class="notes" role="note">${c.editorialNotes.m
 ${c.signals
   .map(
     (s, i) => `<article class="item">
-  <h3>${i + 1}. ${esc(s.headline)}</h3>
+  <div class="keep"><h3>${i + 1}. ${esc(s.headline)}</h3>
   <div class="meta">Event ${esc(formatShortDate(s.eventAt))} · ${s.sourceIds
     .map((id) => {
       const src = c.sources.find((x) => x.sourceId === id);
@@ -125,7 +129,7 @@ ${c.signals
     })
     .filter(Boolean)
     .join(' · ')}${s.weakSignal ? ' · <span class="weak">Weak signal</span>' : ''}</div>
-  <p>${esc(s.summary)}${cite(c, idx, s.sourceIds)}</p>
+  <p>${esc(s.summary)}${cite(c, idx, s.sourceIds)}</p></div>
   <span class="label">Why it matters</span>
   <p>${esc(s.relevance)}</p>
   ${s.qualifications.length ? `<ul class="qual">${s.qualifications.map((q) => `<li>${esc(q)}</li>`).join('')}</ul>` : ''}
@@ -141,8 +145,8 @@ ${
     ? c.consequences
         .map(
           (k, i) => `<article class="item">
-  <h3>${i + 1}. ${esc(k.statement)}</h3>
-  <div class="meta">Horizon: ${esc(k.horizon)} · Affects: ${esc(k.stakeholders.join(', '))}</div>
+  <div class="keep"><h3>${i + 1}. ${esc(k.statement)}</h3>
+  <div class="meta">Horizon: ${esc(k.horizon)} · Affects: ${esc(k.stakeholders.join(', '))}</div></div>
   <span class="label">Mechanism</span><p>${esc(k.mechanism)}</p>
   <span class="label">Competing explanation</span><ul>${k.alternatives.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>
   <span class="label">This would be wrong if</span><ul>${k.disconfirmingIndicators.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>
@@ -159,8 +163,8 @@ ${
 ${
   p
     ? `<article class="item">
-  <div><span class="verdict">${esc(DECISION_LABEL[p.decision] ?? p.decision)}</span><span class="pid">${esc(p.positionId)}${p.isNew ? ' · NEW' : ''}</span></div>
-  <h3>${esc(p.thesis)}</h3>
+  <div class="keep"><div><span class="verdict">${esc(DECISION_LABEL[p.decision] ?? p.decision)}</span><span class="pid">${esc(p.positionId)}${p.isNew ? ' · NEW' : ''}</span></div>
+  <h3>${esc(p.thesis)}</h3></div>
   <dl class="grid">
     <dt>Who</dt><dd>${esc(p.targetActor)}</dd>
     <dt>Decision</dt><dd>${esc(p.decisionToConsider)}</dd>

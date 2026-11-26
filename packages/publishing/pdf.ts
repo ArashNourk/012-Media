@@ -17,9 +17,10 @@ export async function renderPdf(html: string, meta: { title: string }): Promise<
       tagged: true,
       outline: true,
       displayHeaderFooter: true,
-      headerTemplate: '<span></span>',
-      footerTemplate: `<div style="width:100%;font-size:7px;color:#8A8A8A;font-family:Helvetica,Arial,sans-serif;padding:0 0.55in;display:flex;justify-content:space-between;"><span>${meta.title.replace(/</g, '&lt;')}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>`,
-      margin: { top: '0', bottom: '0.4in', left: '0', right: '0' },
+      // Header/footer bands are painted in the page colour (absolutely positioned so they never overlap content).
+      headerTemplate: `<div style="position:absolute;top:0;left:0;right:0;height:0.45in;background:#0B0B0B;-webkit-print-color-adjust:exact;print-color-adjust:exact;"></div>`,
+      footerTemplate: `<div style="position:absolute;bottom:0;left:0;right:0;height:0.4in;background:#0B0B0B;-webkit-print-color-adjust:exact;print-color-adjust:exact;font-size:7px;color:#8A8A8A;font-family:Helvetica,Arial,sans-serif;padding:0.14in 0.55in 0;box-sizing:border-box;display:flex;justify-content:space-between;"><span>${meta.title.replace(/</g, '&lt;')}</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>`,
+      margin: { top: '0.45in', bottom: '0.4in', left: '0', right: '0' },
     });
     return new Uint8Array(pdf);
   } finally {

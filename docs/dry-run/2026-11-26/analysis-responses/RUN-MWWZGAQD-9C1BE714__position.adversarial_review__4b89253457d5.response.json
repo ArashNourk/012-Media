@@ -1,0 +1,20 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as adversarial reviewer in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — same session that drafted the candidates (reduced independence)",
+ "output": {
+  "findings": [
+   {
+    "category": "compliance_or_employer_overlap",
+    "severity": "major",
+    "detail": "Conflict of interest: this position concerns Anthropic, rests only on Anthropic's own announcements, and was analysed with an Anthropic model. It is usable only if that is disclosed prominently with the position."
+   },
+   {
+    "category": "other",
+    "severity": "minor",
+    "detail": "The counterargument (the purchase itself signals intent) is strong; the position should keep saying it advises against over-reading, not that no strategic intent exists."
+   }
+  ],
+  "verdict": "revise",
+  "decisiveObstacle": "The Class N rights are not in the retrieved evidence.",
+  "smallestNextTest": "Read the Class N section of the final prospectus and registration statement."
+ }
+}

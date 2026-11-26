@@ -1,0 +1,91 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "claims": [
+   {
+    "text": "Anthropic launched the roadshow for its proposed initial public offering of Class A common stock.",
+    "type": "observed",
+    "eventState": "completed",
+    "entities": [
+     "Anthropic"
+    ],
+    "excerpt": "Today Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock.",
+    "locator": "para 1",
+    "eventAt": "2026-11-10",
+    "quantities": [],
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "The proposed offering consisted of 825,000,000 Class A shares, 801,351,354 offered by Anthropic and 23,648,646 by existing stockholders.",
+    "type": "observed",
+    "eventState": "proposed",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "825,000,000",
+      "unit": "Class A shares"
+     },
+     {
+      "value": "801,351,354",
+      "unit": "shares offered by Anthropic"
+     },
+     {
+      "value": "23,648,646",
+      "unit": "shares offered by existing stockholders"
+     }
+    ],
+    "excerpt": "The proposed offering consists of 825,000,000 shares of Class A common stock. Of these, 801,351,354 shares are being offered by Anthropic and 23,648,646 shares are being offered by certain existing stockholders.",
+    "locator": "para 2",
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "The initial public offering price was expected to be between $70.00 and $78.00 per share.",
+    "type": "forecast",
+    "eventState": "expected",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "$70.00",
+      "unit": "USD per share (low end)"
+     },
+     {
+      "value": "$78.00",
+      "unit": "USD per share (high end)"
+     }
+    ],
+    "excerpt": "The initial public offering price is expected to be between $70.00 and $78.00 per share.",
+    "locator": "para 3",
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Anthropic expected to grant the underwriters a 30-day option to purchase up to 123,750,000 additional Class A shares.",
+    "type": "forecast",
+    "eventState": "expected",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "123,750,000",
+      "unit": "additional Class A shares"
+     }
+    ],
+    "excerpt": "Anthropic also expects to grant the underwriters a 30-day option to purchase up to an additional 123,750,000 shares of its Class A common stock.",
+    "locator": "para 2",
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   }
+  ],
+  "documentNote": "Company press release announcing the IPO roadshow."
+ }
+}

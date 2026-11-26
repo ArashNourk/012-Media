@@ -1,0 +1,63 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "headline": "Anthropic offers government buyers a 40% discount under a new GSA agreement that extends to state and local governments",
+  "eventAt": "2026-10-27",
+  "topicTags": [
+   "public-sector",
+   "enterprise"
+  ],
+  "entities": [
+   "Anthropic",
+   "General Services Administration",
+   "Claude for Government",
+   "Claude Enterprise"
+  ],
+  "factors": {
+   "materiality": {
+    "score": 3,
+    "rationale": "A 40% discount across every product surface and all levels of US government, with no minimum spend; the $1 billion savings figure is the company's own estimate."
+   },
+   "decisionRelevance": {
+    "score": 4,
+    "rationale": "Changes price and procurement conditions for vendors and integrators selling AI to government, and for agencies choosing whether to trial."
+   },
+   "novelty": {
+    "score": 3,
+    "rationale": "No prior 012 coverage; the source frames the cross-surface scope and the extension to state, local, tribal and territorial governments as new."
+   },
+   "causalReach": {
+    "score": 3,
+    "rationale": "Federal, state and local buyers, systems integrators, and competing vendors pricing into the same schedule."
+   },
+   "sourceReliability": {
+    "score": 3,
+    "rationale": "Vendor announcement: authoritative for its own terms; usage figures and the savings estimate are self-reported."
+   }
+  },
+  "weakSignal": false,
+  "weakSignalRationale": null,
+  "summary": "Anthropic announced an agreement with the General Services Administration giving government buyers a 40% discount on Claude Enterprise, Claude for Government and the Claude API, extended to state, local, tribal and territorial governments and without a minimum spend commitment. Anthropic says approximately 500 US government organizations use Claude and estimates the discounts will save the government $1 billion.",
+  "relevance": "For vendors and integrators selling AI to government, a deep discount with no minimum commitment lowers the cost for an agency to try a product and may reset price expectations in public procurement (inference). The usage figures are the company's own.",
+  "evidenceQualifications": [
+   "Usage figures and the $1 billion savings estimate are Anthropic's own and were not independently verified.",
+   "Two customer anecdotes in the source failed the event-stage check and are excluded."
+  ],
+  "selectionRationale": "Concrete commercial terms in a large, slow-moving buyer segment; bears directly on a tracked position about regulated and public-sector adoption.",
+  "claimIdsUsed": [
+   "CLM-7F88BBDBB6D0",
+   "CLM-0AD19134AA8D",
+   "CLM-55998EE5EDEA",
+   "CLM-EA87CD57C913",
+   "CLM-37894738BB3E",
+   "CLM-223ED7D401ED",
+   "CLM-7D4A2A33BD9E",
+   "CLM-B13FD44256CC",
+   "CLM-A53F1F7D6030"
+  ],
+  "criticalClaimIds": [
+   "CLM-7F88BBDBB6D0",
+   "CLM-0AD19134AA8D"
+  ]
+ }
+}

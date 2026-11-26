@@ -1,0 +1,102 @@
+{
+  "at": "2026-11-26T03:29:50.017Z",
+  "checks": [
+    {
+      "id": "records_connected",
+      "passed": true,
+      "severity": "block",
+      "detail": "00/01/02 and continuity records resolve to stored engine outputs"
+    },
+    {
+      "id": "claim_support_complete",
+      "passed": true,
+      "severity": "block",
+      "detail": "20 claims, all supported or qualified"
+    },
+    {
+      "id": "sources_are_retrieved_articles",
+      "passed": true,
+      "severity": "block",
+      "detail": "4 sources, all retrieved article pages"
+    },
+    {
+      "id": "no_unretrieved_citations",
+      "passed": true,
+      "severity": "block",
+      "detail": "no citations outside the retrieved source list"
+    },
+    {
+      "id": "links_resolve",
+      "passed": true,
+      "severity": "block",
+      "detail": "4 links resolved to the intended pages"
+    },
+    {
+      "id": "dates_verified",
+      "passed": true,
+      "severity": "block",
+      "detail": "issue date is a weekday (America/Toronto); event and publication dates present and not in the future"
+    },
+    {
+      "id": "numbers_traceable",
+      "passed": true,
+      "severity": "block",
+      "detail": "every number traces to a verified claim"
+    },
+    {
+      "id": "continuity_attributable",
+      "passed": true,
+      "severity": "block",
+      "detail": "1 continuity update(s), each with new cited evidence"
+    },
+    {
+      "id": "editorial_grammar",
+      "passed": true,
+      "severity": "block",
+      "detail": "2 signals, 2 consequences, 1 position, 1 continuity"
+    },
+    {
+      "id": "signal_volume",
+      "passed": false,
+      "severity": "warn",
+      "detail": "quiet edition: only 2 verified signal(s) — publish shorter or hold"
+    },
+    {
+      "id": "reading_length",
+      "passed": true,
+      "severity": "warn",
+      "detail": "1198 words (target ≈ 4–6 minutes)"
+    },
+    {
+      "id": "excerpt_bounds",
+      "passed": true,
+      "severity": "block",
+      "detail": "all stored excerpts within 320 characters; no excerpts reproduced in the edition"
+    },
+    {
+      "id": "source_diversity",
+      "passed": false,
+      "severity": "warn",
+      "detail": "single publisher source base (Anthropic): disclose and seek independent corroboration"
+    },
+    {
+      "id": "qualifications_preserved",
+      "passed": true,
+      "severity": "warn",
+      "detail": "self-reported figures carry attribution language"
+    },
+    {
+      "id": "adversarial_draft_check",
+      "passed": true,
+      "severity": "block",
+      "detail": "pass: [minor] continuity: 'with coding capabilities' comes from the supporting excerpt rather than from the claim text itself; it is supported by the retrieved passage. | [minor] lead: 'A month earlier' is approximate (27 October versus 20 November). | [minor] edition: Only two signals: a short edition, correctly disclosed with an extended research window."
+    },
+    {
+      "id": "pdf_preview_render",
+      "passed": true,
+      "severity": "block",
+      "detail": "5 page(s), text fonts present, 5 active links; every source cited in the PDF, tagged"
+    }
+  ],
+  "blocking": false
+}

@@ -1,0 +1,53 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "headline": "Anthropic extends AI for Science credits to foundations, institutions and research projects",
+  "eventAt": "2026-10-28",
+  "topicTags": [
+   "research"
+  ],
+  "entities": [
+   "Anthropic",
+   "AI for Science",
+   "HHMI Janelia Research Campus"
+  ],
+  "factors": {
+   "materiality": {
+    "score": 1,
+    "rationale": "Free model credits for named research partners; no amounts are stated."
+   },
+   "decisionRelevance": {
+    "score": 2,
+    "rationale": "Of limited consequence for commercial decision-makers in the AI economy."
+   },
+   "novelty": {
+    "score": 1,
+    "rationale": "An expansion of an existing programme; the Model Hardware Standard is described as an existing research-preview project."
+   },
+   "causalReach": {
+    "score": 2,
+    "rationale": "Confined mainly to the participating research organisations."
+   },
+   "sourceReliability": {
+    "score": 3,
+    "rationale": "Vendor announcement about its own programme."
+   }
+  },
+  "weakSignal": false,
+  "weakSignalRationale": null,
+  "summary": "Anthropic expanded its AI for Science programme, which gives free Claude credits to researchers, to 20 named foundations, institutions and research groups, and noted its work with HHMI Janelia Research Campus on a specification for AI agents operating lab instruments, now in research preview.",
+  "relevance": "Limited near-term commercial relevance; a programme expansion rather than a market change.",
+  "evidenceQualifications": [
+   "Self-reported programme announcement; no amounts disclosed."
+  ],
+  "selectionRationale": "Not selected: low materiality and decision relevance for this publication.",
+  "claimIdsUsed": [
+   "CLM-CE608DAE5A7D",
+   "CLM-E02EC57C35C6",
+   "CLM-C747EADF8222"
+  ],
+  "criticalClaimIds": [
+   "CLM-CE608DAE5A7D"
+  ]
+ }
+}

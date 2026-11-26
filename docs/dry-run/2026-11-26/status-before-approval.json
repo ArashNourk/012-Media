@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-26",
+  "run": {
+    "id": "RUN-MWWZGAQD-9C1BE714",
+    "stage": "drafted",
+    "status": "drafted",
+    "detail": "awaiting editor approval",
+    "llmCalls": 28
+  },
+  "issue": {
+    "id": "ISS-MWWZGAQG-B6DAFF93",
+    "state": "DRAFTED",
+    "version": 2,
+    "contentSha256": "aa6bda9d73afeaef68819217666ba692f5d596f20a466efe0789d6fd72e955cb",
+    "approvedSha256": null,
+    "sentAt": null
+  },
+  "stateLog": [
+    "2026-11-26T03:18:29.465Z ∅ → COLLECTED (engine) created by run RUN-MWWZGAQD-9C1BE714",
+    "2026-11-26T03:22:11.330Z COLLECTED → VERIFIED (engine) 2 accepted signal(s), 29 verified claims",
+    "2026-11-26T03:24:56.121Z VERIFIED → SYNTHESIZED (engine) 2 accepted consequence(s), 0 held",
+    "2026-11-26T03:27:04.364Z SYNTHESIZED → CHALLENGED (engine) 3 position candidate(s); 1 continuity proposal(s)",
+    "2026-11-26T03:27:45.477Z CHALLENGED → DRAFTED (engine) draft ready for editor review"
+  ],
+  "positions": [
+    {
+      "id": "POS-000001",
+      "status": "EMERGING",
+      "revisions": 0
+    }
+  ],
+  "deliveries": []
+}

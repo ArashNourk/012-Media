@@ -1,0 +1,155 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "claims": [
+   {
+    "text": "Anthropic closed its initial public offering of 1,127,000,000 Class A shares at $83.00 per share, including full exercise of the underwriters' option to buy 147,000,000 additional shares.",
+    "type": "observed",
+    "eventState": "completed",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "1,127,000,000",
+      "unit": "Class A shares"
+     },
+     {
+      "value": "$83.00",
+      "unit": "USD per share"
+     },
+     {
+      "value": "147,000,000",
+      "unit": "additional Class A shares"
+     }
+    ],
+    "excerpt": "announced the closing of its initial public offering of an aggregate of 1,127,000,000 shares of its Class A common stock at a public offering price of $83.00 per share, including the full exercise by the underwriters of their option to purchase an additional 147,000,000 shares",
+    "locator": "para 1",
+    "eventAt": "2026-11-20",
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Gross proceeds of the offering were approximately $93.5 billion, of which approximately $91.6 billion was received by Anthropic.",
+    "type": "observed",
+    "eventState": "not_applicable",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "$93.5",
+      "unit": "USD billion gross proceeds"
+     },
+     {
+      "value": "$91.6",
+      "unit": "USD billion received by Anthropic"
+     }
+    ],
+    "excerpt": "The aggregate gross proceeds from the offering, before deducting underwriting discounts and commissions and other offering expenses, were approximately $93.5 billion, of which approximately $91.6 billion was received by Anthropic.",
+    "locator": "para 1",
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Anthropic's Class A common stock began trading on the Nasdaq Global Select Market on November 19, 2026 under the symbol ANT.",
+    "type": "observed",
+    "eventState": "completed",
+    "entities": [
+     "Anthropic",
+     "Nasdaq"
+    ],
+    "excerpt": "Anthropic’s Class A common stock began trading on the Nasdaq Global Select Market on November 19, 2026 under the symbol “ANT.”",
+    "locator": "para 2",
+    "eventAt": "2026-11-19",
+    "quantities": [],
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Anthropic closed a concurrent sale of 313,253,007 Class N shares to Advanced Micro Devices, Broadcom, Google, Micron Technology, Microsoft, NVIDIA and TSMC Partners.",
+    "type": "observed",
+    "eventState": "completed",
+    "entities": [
+     "Anthropic",
+     "Advanced Micro Devices",
+     "Broadcom",
+     "Google",
+     "Micron Technology",
+     "Microsoft",
+     "NVIDIA",
+     "TSMC Partners"
+    ],
+    "quantities": [
+     {
+      "value": "313,253,007",
+      "unit": "Class N shares"
+     }
+    ],
+    "excerpt": "Anthropic closed the concurrent sale of an aggregate of 313,253,007 shares of Class N common stock to Advanced Micro Devices, Inc., Broadcom Inc., Google LLC, Micron Technology, Inc., Microsoft Corporation, NVIDIA Corporation, and TSMC Partners, Ltd.",
+    "locator": "para 3",
+    "eventAt": "2026-11-20",
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "The private placement was made at the public offering price of $83.00 per share for an aggregate purchase price of approximately $26.0 billion.",
+    "type": "observed",
+    "eventState": "not_applicable",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "$83.00",
+      "unit": "USD per share"
+     },
+     {
+      "value": "$26.0",
+      "unit": "USD billion"
+     }
+    ],
+    "excerpt": "at the public offering price of $83.00 per share, in a private placement for an aggregate purchase price of approximately $26.0 billion.",
+    "locator": "para 3",
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Aggregate gross proceeds from the initial public offering and the concurrent private placement were approximately $119.5 billion before underwriting discounts, commissions and other expenses.",
+    "type": "observed",
+    "eventState": "not_applicable",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "$119.5",
+      "unit": "USD billion"
+     }
+    ],
+    "excerpt": "Aggregate gross proceeds from the initial public offering, including the shares sold by the selling stockholders, and the concurrent private placement were approximately $119.5 billion, before deducting underwriting discounts and commissions and other offering expenses.",
+    "locator": "para 3",
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "The Class N shares sold in the private placement were not registered under the Securities Act of 1933.",
+    "type": "observed",
+    "eventState": "not_applicable",
+    "entities": [
+     "Anthropic"
+    ],
+    "material": false,
+    "excerpt": "The sale of these shares of Class N common stock was not registered under the Securities Act of 1933, as amended",
+    "locator": "para 3",
+    "quantities": [],
+    "eventAt": null,
+    "attribution": null
+   }
+  ],
+  "documentNote": "Company press release announcing completion of an IPO and a concurrent private placement."
+ }
+}

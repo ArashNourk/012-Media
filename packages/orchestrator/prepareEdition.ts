@@ -81,7 +81,7 @@ export async function prepareEdition(ctx: EngineContext, publishing: PublishingE
     }
     repo.updateRun(run.id, 'collected', 'running', `${collected.sources.length} in-window sources`);
     if (!collected.sources.length) {
-      const reason = `quiet window: no eligible source documents published in the ${lookbackHours} h ending ${o.asOf} (${collected.outOfWindow} discovered items outside the window, ${collected.failed.length} retrieval failures)`;
+      const reason = `quiet window: no eligible source documents published in the ${lookbackHours} h ending ${o.asOf} (${collected.outOfWindow} discovered items outside the window; ${collected.failed.length} pages rejected as index pages or failed retrievals)`;
       hold(reason);
       repo.updateRun(run.id, 'quiet', 'quiet', reason);
       return { status: 'quiet', run: repo.getRun(run.id), issue: repo.getIssue(issue.id), reason };

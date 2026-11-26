@@ -1,0 +1,219 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "claims": [
+   {
+    "text": "Anthropic's new agreement with the General Services Administration gives government partners a 40% discount on Claude Enterprise, Claude for Government and the Claude API.",
+    "type": "observed",
+    "eventState": "announced",
+    "entities": [
+     "Anthropic",
+     "General Services Administration"
+    ],
+    "quantities": [
+     {
+      "value": "40%",
+      "unit": "percent discount"
+     }
+    ],
+    "excerpt": "We are expanding our partnership with the General Services Administration (GSA) through a new agreement that gives government partners a 40% discount on Claude Enterprise, Claude for Government, and the Claude API.",
+    "locator": "para 1",
+    "eventAt": "2026-10-27",
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "The discount also extends to state, local, tribal and territorial governments.",
+    "type": "observed",
+    "eventState": "announced",
+    "entities": [
+     "Anthropic",
+     "General Services Administration"
+    ],
+    "excerpt": "The discount also extends to state, local, tribal and territorial governments.",
+    "locator": "para 1",
+    "quantities": [],
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Anthropic says approximately 500 US federal, state and local government organizations now use Claude.",
+    "type": "reported_claim",
+    "eventState": "not_applicable",
+    "entities": [
+     "Anthropic",
+     "US government organizations"
+    ],
+    "quantities": [
+     {
+      "value": "500",
+      "unit": "government organizations"
+     }
+    ],
+    "attribution": "Anthropic",
+    "excerpt": "Approximately 500 US federal, state, and local government organizations now use Claude.",
+    "locator": "para 3",
+    "eventAt": null,
+    "material": true
+   },
+   {
+    "text": "Anthropic says weekly Claude for Government active users are up about eightfold since February, and usage across federal civilian agencies has grown about 20-fold in a year.",
+    "type": "reported_claim",
+    "eventState": "not_applicable",
+    "entities": [
+     "Anthropic",
+     "Claude for Government"
+    ],
+    "quantities": [
+     {
+      "value": "20",
+      "unit": "fold growth in federal civilian usage over a year"
+     }
+    ],
+    "attribution": "Anthropic",
+    "excerpt": "Weekly Claude for Government active users are up about eightfold since February, and usage across federal civilian agencies has grown about 20-fold in a year.",
+    "locator": "para 3",
+    "eventAt": null,
+    "material": true
+   },
+   {
+    "text": "Anthropic estimates the discounts will save the government $1 billion.",
+    "type": "forecast",
+    "eventState": "expected",
+    "entities": [
+     "Anthropic",
+     "General Services Administration"
+    ],
+    "quantities": [
+     {
+      "value": "$1",
+      "unit": "USD billion estimated savings"
+     }
+    ],
+    "attribution": "Anthropic",
+    "excerpt": "The discounts offered through the agreement are estimated to save the government $1 billion.",
+    "locator": "para 4",
+    "eventAt": null,
+    "material": true
+   },
+   {
+    "text": "Agencies are not bound by a minimum spend commitment and will pay for the usage they consume.",
+    "type": "observed",
+    "eventState": "planned",
+    "entities": [
+     "Anthropic",
+     "General Services Administration"
+    ],
+    "excerpt": "Agencies are not bound by a minimum spend commitment and will be able to pay for the usage they consume.",
+    "locator": "para 4",
+    "quantities": [],
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "In a four-week pilot, Utah gave Claude Code to 34 developers across 10 state agencies, and 71% of them reported saving 20 or more hours.",
+    "type": "reported_claim",
+    "eventState": "completed",
+    "entities": [
+     "Utah",
+     "Claude Code"
+    ],
+    "quantities": [
+     {
+      "value": "34",
+      "unit": "developers"
+     },
+     {
+      "value": "10",
+      "unit": "state agencies"
+     },
+     {
+      "value": "71%",
+      "unit": "percent reporting time savings"
+     },
+     {
+      "value": "20",
+      "unit": "hours saved (at least)"
+     }
+    ],
+    "attribution": "Anthropic",
+    "excerpt": "Utah gave Claude Code to 34 developers across 10 state agencies. 80% had a working environment within 30 minutes, 71% reported saving 20+ hours by the end of the four-week pilot.",
+    "locator": "section: How Claude is helping public servants get more done",
+    "eventAt": null,
+    "material": true
+   },
+   {
+    "text": "A US state IT director used Claude Code to document 12 legacy code repositories, mapping 467 database tables.",
+    "type": "reported_claim",
+    "eventState": "completed",
+    "entities": [
+     "Claude Code",
+     "US state government"
+    ],
+    "quantities": [
+     {
+      "value": "12",
+      "unit": "legacy code repositories"
+     },
+     {
+      "value": "467",
+      "unit": "database tables"
+     }
+    ],
+    "attribution": "Anthropic",
+    "excerpt": "A US state IT director used Claude Code to document 12 legacy code repositories, mapping 467 database tables and flagging 27 risks along the way.",
+    "locator": "section: How Claude is helping public servants get more done",
+    "eventAt": null,
+    "material": true
+   },
+   {
+    "text": "Claude for Government, offered at a FedRAMP High authorization level, was made generally available on September 30.",
+    "type": "observed",
+    "eventState": "completed",
+    "entities": [
+     "Anthropic",
+     "Claude for Government"
+    ],
+    "excerpt": "Claude for Government, which delivers Claude's coding and agentic work capabilities and provides near-feature parity with commercial offerings at a FedRAMP High authorization level, was made generally available on September 30.",
+    "locator": "section: Meeting government security requirements",
+    "quantities": [],
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Claude Enterprise is in process for FedRAMP Moderate authorization through the FedRAMP 20x program.",
+    "type": "observed",
+    "eventState": "not_applicable",
+    "entities": [
+     "Anthropic",
+     "Claude Enterprise"
+    ],
+    "excerpt": "Claude Enterprise is in process for FedRAMP Moderate authorization through the FedRAMP 20x program",
+    "locator": "section: Meeting government security requirements",
+    "quantities": [],
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Government agencies can buy Claude at the OneGov discount through GSA's Multiple Award Schedule.",
+    "type": "observed",
+    "eventState": "not_applicable",
+    "entities": [
+     "Anthropic",
+     "General Services Administration"
+    ],
+    "excerpt": "Government agencies can buy Claude at the OneGov discount through GSA's Multiple Award Schedule today.",
+    "locator": "section: Getting started",
+    "quantities": [],
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   }
+  ],
+  "documentNote": "Company announcement of a federal procurement agreement, with self-reported usage figures and customer anecdotes."
+ }
+}

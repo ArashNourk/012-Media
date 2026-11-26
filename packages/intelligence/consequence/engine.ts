@@ -2,7 +2,7 @@ import { stableId, type Claim, type Consequence, type Signal } from '../../contr
 import type { RunRecord } from '../../persistence/repository';
 import type { EngineContext } from '../context';
 import { untracedNumbers } from '../shared/numbers';
-import { CHALLENGE, MAP_MECHANISMS, SYNTHESIZE, type SignalForAnalysis, type TrackedPositionBrief } from './tasks';
+import { CHALLENGE, MAP_MECHANISMS, REVISE, SYNTHESIZE, type SignalForAnalysis, type TrackedPositionBrief } from './tasks';
 
 export const MAX_CONSEQUENCES = 3;
 
@@ -43,7 +43,7 @@ export class ConsequenceEngine {
     const allowedClaims = new Map(sigs.flatMap((s) => s.claims.map((c) => [c.claimId, c] as const)));
     const trackedIds = new Set(tracked.map((t) => t.positionId));
 
-    const prelim = synth.consequences.map((c, idx) => {
+    const validate = (c: (typeof synth.consequences)[number], idx: number) => {
       const problems: string[] = [];
       const badSignals = c.linkedSignalIds.filter((id) => !acceptedIds.has(id));
       if (!c.linkedSignalIds.length) problems.push('no linked signals');
@@ -59,11 +59,26 @@ export class ConsequenceEngine {
       const untraced = untracedNumbers(`${c.statement} ${c.mechanism}`, evidence);
       if (untraced.length) problems.push(`numbers not traceable to cited claims: ${untraced.join(', ')}`);
       const links = c.continuityLinks.filter((l) => trackedIds.has(l.positionId));
-      return { c, idx, problems, links };
-    });
+      return { c, idx, problems, links, revised: false };
+    };
+    const evidenceFor = (c: (typeof synth.consequences)[number]) => c.observedClaimIds.map((id) => allowedClaims.get(id)).filter((x): x is NonNullable<typeof x> => !!x);
 
-    const challengeInputs = prelim.map(({ c }) => ({ consequence: c, claims: c.observedClaimIds.map((id) => allowedClaims.get(id)).filter((x): x is NonNullable<typeof x> => !!x) }));
-    const challenges = (await runner.runAll(CHALLENGE, challengeInputs, run.id)).map((r) => r.output);
+    let prelim = synth.consequences.map((c, idx) => validate(c, idx));
+    let challenges = (await runner.runAll(CHALLENGE, prelim.map(({ c }) => ({ consequence: c, claims: evidenceFor(c) })), run.id)).map((r) => r.output);
+
+    // "Return for revision": one bounded round for contract-clean consequences the challenger marked "revise".
+    const toRevise = prelim.map((p, i) => ({ p, i })).filter(({ p, i }) => !p.problems.length && challenges[i].verdict === 'revise');
+    if (toRevise.length) {
+      const revised = (await runner.runAll(REVISE, toRevise.map(({ p, i }) => ({ consequence: p.c, findings: challenges[i].findings, claims: evidenceFor(p.c) })), run.id)).map((r) => r.output);
+      const reval = toRevise.map(({ p }, k) => ({ ...validate(revised[k], p.idx), revised: true }));
+      const rech = (await runner.runAll(CHALLENGE, reval.map(({ c }) => ({ consequence: c, claims: evidenceFor(c) })), run.id)).map((r) => r.output);
+      prelim = prelim.slice();
+      challenges = challenges.slice();
+      toRevise.forEach(({ i }, k) => {
+        prelim[i] = reval[k];
+        challenges[i] = { ...rech[k], findings: [...rech[k].findings, ...(rech[k].verdict === 'pass' ? ['(passed after one revision round)'] : ['(held after one revision round)'])] };
+      });
+    }
 
     let acceptedCount = 0;
     const out: Consequence[] = prelim.map(({ c, idx, problems, links }, i) => {

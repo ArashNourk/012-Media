@@ -1,0 +1,55 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "signalId": "SIG-98178826805C",
+  "observedChange": "Anthropic completed an initial public offering, receiving approximately $91.6 billion, and at the same time sold 313,253,007 Class N shares for approximately $26.0 billion to seven named technology companies.",
+  "affectedActors": [
+   {
+    "actor": "Anthropic",
+    "incentive": "Finance model development and compute from a much larger cash position, now as a listed company."
+   },
+   {
+    "actor": "The seven Class N purchasers (Advanced Micro Devices, Broadcom, Google, Micron Technology, Microsoft, NVIDIA, TSMC Partners)",
+    "incentive": "Equity exposure to Anthropic; the source does not state their reasons (inference)."
+   },
+   {
+    "actor": "Competing frontier-model developers",
+    "incentive": "Keep pace with a rival that can now raise capital in public markets (inference)."
+   },
+   {
+    "actor": "Public-market investors",
+    "incentive": "Direct exposure to a frontier-model developer through the Nasdaq listing."
+   }
+  ],
+  "causalChain": [
+   "Anthropic received approximately $91.6 billion of offering proceeds and approximately $26.0 billion from the placement (observed).",
+   "A cash position of this size can fund multi-year compute and model-development commitments without another private round (inference).",
+   "Rivals now compete with a developer whose access to capital is public and repeatable (inference).",
+   "Private rivals face pressure to list or raise larger strategic rounds to keep pace (inference)."
+  ],
+  "constraints": [
+   "Use of proceeds is not described in the retrieved documents.",
+   "The rights attached to Class N shares are not described.",
+   "How quickly capital becomes compute capacity depends on supply of chips, power and data centres, which these sources do not address."
+  ],
+  "baseline": "Without the listing, frontier development would continue to be financed through private and strategic rounds; how large those rounds have been is not in the retrieved evidence.",
+  "shiftType": "structural",
+  "firstOrderEffects": [
+   "Anthropic holds substantially more capital.",
+   "Seven technology companies hold a separate class of Anthropic equity.",
+   "Anthropic shares trade publicly under the symbol ANT."
+  ],
+  "secondOrderEffects": [
+   "As a listed company Anthropic will be subject to periodic public reporting, which could make frontier-model economics more observable (inference; reporting obligations are not described in the sources).",
+   "Pressure on rivals’ financing strategies (inference)."
+  ],
+  "claimIdsUsed": [
+   "CLM-AD5A90C55B3D",
+   "CLM-7DC175876F79",
+   "CLM-76EF0FFB46EF",
+   "CLM-A00165C461F1",
+   "CLM-D436012596A2",
+   "CLM-E7F9F4277BD7"
+  ]
+ }
+}

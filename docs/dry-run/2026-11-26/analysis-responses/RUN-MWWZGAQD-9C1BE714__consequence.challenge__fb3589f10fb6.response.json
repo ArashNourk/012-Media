@@ -1,0 +1,12 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as adversarial reviewer in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — same session that drafted the consequence (reduced independence)",
+ "output": {
+  "verdict": "revise",
+  "neutralHeadlineTest": "Neutral facts: one AI developer completed an IPO and received about $91.6 billion, and sold about $26.0 billion of a separate share class to seven named companies. From these facts it follows that this developer has more capital and a public listing. It does not follow that 'frontier-model financing has moved into public markets' in general, nor that the bar for rivals has risen; both are inference about other firms from one case.",
+  "findings": [
+   "The opening clause generalises from a single listing to frontier-model financing as a whole.",
+   "'Raises the financing bar for private rivals' is stated as an outcome; it is inference and should be conditional.",
+   "The statement should carry the evidence limitation that use of proceeds is undisclosed."
+  ]
+ }
+}

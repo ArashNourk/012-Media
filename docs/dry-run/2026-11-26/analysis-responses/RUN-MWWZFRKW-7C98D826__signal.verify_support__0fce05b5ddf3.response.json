@@ -1,0 +1,3 @@
+{"producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured", "output": {"judgements": [
+ {"claimKey": "CLM-BE1DA00E7CC4", "verdict": "entails", "note": "Excerpt states both commitments in the future tense; the claim keeps them as plans (eventState planned)."}
+]}}

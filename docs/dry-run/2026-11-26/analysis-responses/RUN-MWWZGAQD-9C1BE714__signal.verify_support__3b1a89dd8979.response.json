@@ -1,0 +1,62 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "judgements": [
+   {
+    "claimKey": "CLM-7F88BBDBB6D0",
+    "verdict": "entails",
+    "note": "First-person 'we' is the publisher (Anthropic newsroom); discount and products match."
+   },
+   {
+    "claimKey": "CLM-0AD19134AA8D",
+    "verdict": "entails",
+    "note": "Verbatim."
+   },
+   {
+    "claimKey": "CLM-55998EE5EDEA",
+    "verdict": "entails",
+    "note": "Figure matches and is attributed to Anthropic."
+   },
+   {
+    "claimKey": "CLM-EA87CD57C913",
+    "verdict": "entails",
+    "note": "Figures match and are attributed."
+   },
+   {
+    "claimKey": "CLM-37894738BB3E",
+    "verdict": "partially_entails",
+    "note": "The excerpt does not say who made the estimate; attributing it to Anthropic relies on the publisher context."
+   },
+   {
+    "claimKey": "CLM-223ED7D401ED",
+    "verdict": "partially_entails",
+    "note": "Excerpt says agencies 'will be able to' pay for consumption; the claim states it as what they will do."
+   },
+   {
+    "claimKey": "CLM-20E08429389B",
+    "verdict": "entails",
+    "note": "Figures and pilot length match; attributed."
+   },
+   {
+    "claimKey": "CLM-165226680766",
+    "verdict": "entails",
+    "note": "Figures match."
+   },
+   {
+    "claimKey": "CLM-7D4A2A33BD9E",
+    "verdict": "entails",
+    "note": "Authorization level and availability date match (no year stated in either)."
+   },
+   {
+    "claimKey": "CLM-B13FD44256CC",
+    "verdict": "entails",
+    "note": "Verbatim; in-process, not authorized."
+   },
+   {
+    "claimKey": "CLM-A53F1F7D6030",
+    "verdict": "entails",
+    "note": "Matches."
+   }
+  ]
+ }
+}

@@ -1,0 +1,25 @@
+012 MEDIA — 01 / AI ECONOMY — Thursday, November 26, 2026
+
+Anthropic's listing closes; the $26.0 billion side placement is the part to read carefully
+
+Anthropic closed its initial public offering, receiving approximately $91.6 billion, and sold approximately $26.0 billion of a separate share class to seven technology companies; the announcements do not say what those shares confer. A month earlier it cut government prices 40% with no minimum spend. Both developments come from the company's own releases, and this edition treats them that way.
+
+00 / SIGNAL
+- Anthropic closes its IPO and a $26.0 billion private placement with seven technology companies
+- Anthropic offers government buyers a 40% discount under a new GSA agreement that extends to state and local governments
+
+01 / CONSEQUENCE
+One frontier-model developer can now finance itself in public markets: Anthropic received approximately $91.6 billion from its offering and approximately $26.0 billion from the concurrent placement. If those proceeds are committed to compute and model development — the retrieved documents do not say how they will be used — private rivals would need larger strategic rounds or listings of their own to keep pace.
+
+02 / POSITION
+MONITOR (POS-000002): The $26.0 billion Class N placement with seven technology companies is the least explained part of Anthropic's listing; until the rights attached to those shares are known, investors and rival developers should not read it as evidence of preferential supply or commercial terms.
+First test: Retrieve the final prospectus and registration statement and read the Class N terms. If they carry no voting, board, supply or other commercial rights beyond ordinary economics, retire the strategic-alignment reading; if they do, open a new position on those rights.
+
+CONTINUITY / POS-000001 — STRENGTHENING
+First identified Oct 2, 2026. New vendor-reported evidence from US government — a 40% discount across every level of government with no minimum spend, and a FedRAMP High offering with coding capabilities now generally available — strengthens the public-sector part of this thesis. It does not meet the validation condition: no individual organisation has yet committed to organisation-wide coding-agent use, and the figures are self-reported.
+
+Read the full brief: https://zeroonetwo.media/e/x/
+PDF: https://zeroonetwo.media/e/x/b.pdf
+
+012 MEDIA · [publisher postal address required before launch] · https://zeroonetwo.media
+Unsubscribe: https://zeroonetwo.media/unsubscribe?token=x

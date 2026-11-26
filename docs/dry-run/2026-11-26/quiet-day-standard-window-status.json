@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-26",
+  "run": {
+    "id": "RUN-MWWZEMZM-A760563C",
+    "stage": "quiet",
+    "status": "quiet",
+    "detail": "quiet window: no eligible source documents published in the 72 h ending 2026-11-26T03:17:12.033Z (0 discovered items outside the window, 8 retrieval failures)",
+    "llmCalls": 0
+  },
+  "issue": {
+    "id": "ISS-MWWZEMZO-0799629A",
+    "state": "HELD_FOR_EVIDENCE",
+    "version": 0,
+    "contentSha256": null,
+    "approvedSha256": null,
+    "sentAt": null
+  },
+  "stateLog": [
+    "2026-11-26T03:17:12.036Z ∅ → COLLECTED (engine) created by run RUN-MWWZEMZM-A760563C",
+    "2026-11-26T03:17:14.178Z COLLECTED → HELD_FOR_EVIDENCE (engine) quiet window: no eligible source documents published in the 72 h ending 2026-11-26T03:17:12.033Z (0 discovered items outside the window, 8 retrieval failures)"
+  ],
+  "positions": [],
+  "deliveries": []
+}

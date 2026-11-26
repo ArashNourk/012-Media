@@ -1,0 +1,72 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "claims": [
+   {
+    "text": "Anthropic expanded its AI for Science program, which gives free Claude credits to researchers on high-impact projects, to 20 scientific foundations, institutions and research groups.",
+    "type": "observed",
+    "eventState": "announced",
+    "entities": [
+     "Anthropic",
+     "AI for Science"
+    ],
+    "quantities": [
+     {
+      "value": "20",
+      "unit": "foundations, institutions and research groups"
+     }
+    ],
+    "excerpt": "We’re highlighting 20 scientific foundations, institutions, and research groups from around the world that we’ve partnered with in an expansion of our AI for Science program , which gives free Claude credits to researchers working on high-impact scientific projects.",
+    "locator": "para 1",
+    "eventAt": "2026-10-28",
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Participating science funders and societies will distribute Claude credits to researchers using AI for scientific research.",
+    "type": "observed",
+    "eventState": "planned",
+    "entities": [
+     "Anthropic"
+    ],
+    "excerpt": "We’re sharing Claude credits with the following organizations, which will distribute these resources to ambitious researchers aiming to use AI for scientific research",
+    "locator": "section: Science funders and societies",
+    "quantities": [],
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Anthropic partnered with HHMI Janelia Research Campus to develop the Model Hardware Standard, a specification that lets AI agents operate lab instruments; it is in research preview.",
+    "type": "observed",
+    "eventState": "announced",
+    "entities": [
+     "Anthropic",
+     "HHMI Janelia Research Campus",
+     "Model Hardware Standard"
+    ],
+    "excerpt": "we partnered with HHMI Janelia Research Campus to develop the Model Hardware Standard (MHS), a shared specification that lets AI agents safely operate lab instruments. MHS is currently in research preview.",
+    "locator": "para 4",
+    "quantities": [],
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "The Allen Institute is building teams of AI agents to analyze its research data.",
+    "type": "reported_claim",
+    "eventState": "not_applicable",
+    "entities": [
+     "Allen Institute"
+    ],
+    "material": false,
+    "attribution": "Anthropic",
+    "excerpt": "The institute is building teams of AI agents to analyze that data, turning months of manual analysis into hours.",
+    "locator": "para 4",
+    "quantities": [],
+    "eventAt": null
+   }
+  ],
+  "documentNote": "Company programme announcement (research credits and partnerships)."
+ }
+}

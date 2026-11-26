@@ -1,0 +1,102 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "claims": [
+   {
+    "text": "Anthropic priced its initial public offering of Class A common stock at $83.00 per share.",
+    "type": "observed",
+    "eventState": "announced",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "$83.00",
+      "unit": "USD per share"
+     }
+    ],
+    "excerpt": "Today Anthropic, PBC priced its initial public offering of its Class A common stock at $83.00 per share.",
+    "locator": "para 1",
+    "eventAt": "2026-11-18",
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "At pricing, the offering consisted of 980,000,000 Class A shares: 956,351,354 sold by Anthropic and 23,648,646 by selling stockholders.",
+    "type": "observed",
+    "eventState": "announced",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "980,000,000",
+      "unit": "Class A shares"
+     },
+     {
+      "value": "956,351,354",
+      "unit": "shares sold by Anthropic"
+     },
+     {
+      "value": "23,648,646",
+      "unit": "shares sold by selling stockholders"
+     }
+    ],
+    "excerpt": "The offering consists of 980,000,000 shares of Class A common stock, 956,351,354 of which are being sold by Anthropic and 23,648,646 of which are being sold by certain selling stockholders.",
+    "locator": "para 1",
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "Anthropic granted the underwriters a 30-day option to purchase up to 147,000,000 additional Class A shares.",
+    "type": "observed",
+    "eventState": "announced",
+    "entities": [
+     "Anthropic"
+    ],
+    "quantities": [
+     {
+      "value": "147,000,000",
+      "unit": "additional Class A shares"
+     }
+    ],
+    "excerpt": "Anthropic has granted the underwriters a 30-day option to purchase up to an additional 147,000,000 shares of its Class A common stock.",
+    "locator": "para 2",
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "The SEC declared the registration statement for the offering effective on November 18, 2026.",
+    "type": "observed",
+    "eventState": "approved",
+    "entities": [
+     "Anthropic",
+     "Securities and Exchange Commission"
+    ],
+    "excerpt": "A registration statement relating to these securities was declared effective by the Securities and Exchange Commission on November 18, 2026.",
+    "locator": "para 3",
+    "eventAt": "2026-11-18",
+    "quantities": [],
+    "attribution": null,
+    "material": true
+   },
+   {
+    "text": "The offering was expected to close on November 20, 2026, subject to customary closing conditions.",
+    "type": "forecast",
+    "eventState": "expected",
+    "entities": [
+     "Anthropic"
+    ],
+    "excerpt": "The offering is expected to close on November 20, 2026, subject to the satisfaction of customary closing conditions.",
+    "locator": "para 2",
+    "quantities": [],
+    "eventAt": null,
+    "attribution": null,
+    "material": true
+   }
+  ],
+  "documentNote": "Company press release announcing IPO pricing."
+ }
+}

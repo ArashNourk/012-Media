@@ -1,0 +1,82 @@
+{
+  "firstIdentifiedOn": "2026-10-02",
+  "seedNote": "Seeded ledger record for the Architecture v1.0 §13 continuity demonstration. Authored from real, live-retrieved Anthropic newsroom articles published on or before 2026-10-01. It was never published in a 012 edition and must not be presented as one.",
+  "thesis": "Regulated institutions are moving coding agents from pilots to organisation-wide deployment, with legacy-system modernisation as the entry point; delivery partners that combine agent deployment with compliance and governance capacity are positioned to capture that work.",
+  "decision": "MONITOR",
+  "rationale": "Two large regulated-sector commitments (a universal bank and a global IT-services firm) state organisation-wide adoption plans, but the figures are self-reported and the evidence base is one vendor's announcements.",
+  "targetActor": "Technology-services firms and software vendors selling into banks, insurers and the public sector",
+  "decisionToConsider": "Whether to build a governed legacy-modernisation offering around coding agents now, or wait for adoption evidence from more regulated buyers.",
+  "alternatives": [
+    "The commitments reflect vendor-partner marketing rather than measured production adoption.",
+    "Regulated buyers will standardise on hyperscaler-bundled tools, leaving little room for independent delivery partners."
+  ],
+  "blocker": "Adoption targets and usage figures are self-reported by the vendor and its customers; no independent measurement exists in the evidence.",
+  "falsificationTest": "Track public statements from regulated institutions and government buyers until the review date; if none beyond the seed evidence announces organisation-wide coding-agent deployment with a measurable target, downgrade the position.",
+  "reviewDate": "2026-12-31",
+  "entities": ["Barclays", "Tata Consultancy Services", "Claude Code", "Anthropic"],
+  "topicTags": ["enterprise", "agents", "public-sector"],
+  "validationConditions": [
+    "By the review date, at least one additional regulated-sector or public-sector organisation publicly commits to organisation-wide coding-agent use with a stated adoption target, user count or procurement vehicle.",
+    "Barclays or a comparable bank publicly reports reaching its stated Claude Code adoption target."
+  ],
+  "invalidationConditions": [
+    "A regulator or a named regulated institution publicly restricts or rolls back coding-agent deployment for compliance or security reasons.",
+    "By the review date, no further regulated or public-sector organisation has made such a commitment public."
+  ],
+  "initialStatus": "EMERGING",
+  "evidence": [
+    {
+      "url": "https://www.anthropic.com/news/barclays-scales-claude",
+      "claims": [
+        {
+          "text": "Barclays is extending Claude across the bank to accelerate software development and modernize legacy systems.",
+          "type": "observed",
+          "eventState": "announced",
+          "entities": ["Barclays", "Claude"],
+          "quantities": [],
+          "excerpt": "Barclays is extending Claude across the bank to accelerate software development, modernize legacy systems, and improve operational efficiency.",
+          "locator": "para 2",
+          "material": true
+        },
+        {
+          "text": "Barclays expects Claude Code adoption to reach 50% of its developer population by the end of 2026, rising to a majority of software engineers in 2027.",
+          "type": "forecast",
+          "eventState": "expected",
+          "entities": ["Barclays", "Claude Code"],
+          "quantities": [{ "value": "50%", "unit": "percent of developer population" }],
+          "excerpt": "Barclays expects Claude Code adoption to reach 50% of its developer population by the end of 2026, rising to a majority of software engineers in 2027.",
+          "locator": "para 2",
+          "material": true
+        },
+        {
+          "text": "Barclays' Claude-powered Colleague Knowledge Assistant has been live since 2025, has been adopted by more than 16,000 colleagues and has handled over one million searches.",
+          "type": "reported_claim",
+          "eventState": "operational",
+          "entities": ["Barclays", "Claude"],
+          "quantities": [{ "value": "16,000", "unit": "colleagues" }],
+          "excerpt": "The capability, which has been live since 2025, is powered by Claude through a retrieval-augmented generation architecture. More than 16,000 colleagues have adopted the assistant, and it has handled over one million searches.",
+          "locator": "section: Claude powers knowledge assistance to speed up customer servicing",
+          "material": true
+        }
+      ]
+    },
+    {
+      "url": "https://www.anthropic.com/news/tcs-anthropic-partnership",
+      "claims": [
+        {
+          "text": "TCS will provide Claude to 50,000 of its own employees across 56 countries and build Claude-powered products for clients in regulated industries.",
+          "type": "observed",
+          "eventState": "planned",
+          "entities": ["Tata Consultancy Services", "Claude"],
+          "quantities": [
+            { "value": "50,000", "unit": "employees" },
+            { "value": "56", "unit": "countries" }
+          ],
+          "excerpt": "TCS will provide Claude to 50,000 of its own employees across 56 countries; build Claude-powered products for clients in financial services, healthcare, the public sector, and other regulated industries",
+          "locator": "para 1",
+          "material": true
+        }
+      ]
+    }
+  ]
+}

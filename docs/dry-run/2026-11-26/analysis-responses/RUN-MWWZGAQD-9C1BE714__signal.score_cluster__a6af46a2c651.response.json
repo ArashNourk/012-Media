@@ -1,0 +1,73 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "headline": "Anthropic closes its IPO and a $26.0 billion private placement with seven technology companies",
+  "eventAt": "2026-11-20",
+  "topicTags": [
+   "capital",
+   "semiconductors"
+  ],
+  "entities": [
+   "Anthropic",
+   "Advanced Micro Devices",
+   "Broadcom",
+   "Google",
+   "Micron Technology",
+   "Microsoft",
+   "NVIDIA",
+   "TSMC Partners",
+   "Nasdaq"
+  ],
+  "factors": {
+   "materiality": {
+    "score": 5,
+    "rationale": "Approximately $119.5 billion of aggregate gross proceeds across the offering and the placement; the largest capital event in the window."
+   },
+   "decisionRelevance": {
+    "score": 4,
+    "rationale": "Investors, rival model developers and the seven purchasers all face changed facts: a frontier developer is now publicly traded and partly owned through a separate share class by named technology companies."
+   },
+   "novelty": {
+    "score": 4,
+    "rationale": "No prior 012 coverage; the closing finalises terms that differed from the roadshow and pricing documents."
+   },
+   "causalReach": {
+    "score": 4,
+    "rationale": "Touches public-market capital for AI developers and equity ties with seven technology companies, though the source does not describe what the Class N shares confer."
+   },
+   "sourceReliability": {
+    "score": 3,
+    "rationale": "Issuer's own press releases: authoritative for what it announced, but no filing or independent report was retrieved."
+   }
+  },
+  "weakSignal": false,
+  "weakSignalRationale": null,
+  "summary": "Anthropic closed its initial public offering of 1,127,000,000 Class A shares at $83.00 per share, including the underwriters' full option, for gross proceeds of approximately $93.5 billion, of which approximately $91.6 billion went to Anthropic; the stock began trading on the Nasdaq Global Select Market under the symbol ANT. It also closed a concurrent private placement of 313,253,007 Class N shares, at the same price and for approximately $26.0 billion, with Advanced Micro Devices, Broadcom, Google, Micron Technology, Microsoft, NVIDIA and TSMC Partners.",
+  "relevance": "Observed: a frontier-model developer now raises capital in public markets, and seven named technology companies bought a separate class of its equity at the same time. Inference: that couples the company's financing more closely to the companies it works with, but the retrieved documents do not say what rights Class N shares carry or why the purchasers bought them.",
+  "evidenceQualifications": [
+   "All figures come from Anthropic's own press releases; no registration statement, prospectus or independent report was retrieved.",
+   "The rights attached to the Class N shares are not described in the retrieved documents.",
+   "Proceeds are gross, before underwriting discounts, commissions and expenses."
+  ],
+  "selectionRationale": "Largest and most consequential capital event in the window, with a structural feature (a concurrent placement to seven technology companies) that bears on how frontier development is financed.",
+  "claimIdsUsed": [
+   "CLM-AD5A90C55B3D",
+   "CLM-7DC175876F79",
+   "CLM-76EF0FFB46EF",
+   "CLM-A00165C461F1",
+   "CLM-D436012596A2",
+   "CLM-E7F9F4277BD7",
+   "CLM-4211A86D2015",
+   "CLM-63EA5AB1A876",
+   "CLM-32326D1B38A9",
+   "CLM-594A019BFA2C",
+   "CLM-07EC0855ED32"
+  ],
+  "criticalClaimIds": [
+   "CLM-AD5A90C55B3D",
+   "CLM-7DC175876F79",
+   "CLM-A00165C461F1",
+   "CLM-D436012596A2"
+  ]
+ }
+}

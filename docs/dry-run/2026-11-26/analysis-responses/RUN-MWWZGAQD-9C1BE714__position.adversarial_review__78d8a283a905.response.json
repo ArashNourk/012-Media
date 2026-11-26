@@ -1,0 +1,25 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as adversarial reviewer in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — same session that drafted the candidates (reduced independence)",
+ "output": {
+  "findings": [
+   {
+    "category": "weak_demand_evidence",
+    "severity": "major",
+    "detail": "No buyer evidence of an implementation shortfall or of willingness to pay for packaged services."
+   },
+   {
+    "category": "absent_competitor_knowledge",
+    "severity": "major",
+    "detail": "No evidence about incumbent integrators or the vendor’s own implementation support; the gap may not exist."
+   },
+   {
+    "category": "compliance_or_employer_overlap",
+    "severity": "minor",
+    "detail": "Public-sector procurement and accreditation obligations fall on the integrator."
+   }
+  ],
+  "verdict": "revise",
+  "decisiveObstacle": "Unverified buyer demand.",
+  "smallestNextTest": "Ten buyer conversations with a priced scoped-discovery offer."
+ }
+}

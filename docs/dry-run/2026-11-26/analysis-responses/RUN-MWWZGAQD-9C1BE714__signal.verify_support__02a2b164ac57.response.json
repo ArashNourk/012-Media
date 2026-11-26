@@ -1,0 +1,27 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "judgements": [
+   {
+    "claimKey": "CLM-07EC0855ED32",
+    "verdict": "entails",
+    "note": "Verbatim."
+   },
+   {
+    "claimKey": "CLM-AE1C5BD340EC",
+    "verdict": "entails",
+    "note": "Figures match; stated as a proposal."
+   },
+   {
+    "claimKey": "CLM-FAC437CD8211",
+    "verdict": "entails",
+    "note": "Expectation, kept as forecast."
+   },
+   {
+    "claimKey": "CLM-BBC6CACD922A",
+    "verdict": "entails",
+    "note": "Expectation, kept as forecast."
+   }
+  ]
+ }
+}

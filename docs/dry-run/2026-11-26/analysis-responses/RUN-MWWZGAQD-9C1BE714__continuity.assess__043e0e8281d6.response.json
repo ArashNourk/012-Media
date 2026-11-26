@@ -1,0 +1,19 @@
+{
+ "producedBy": "Claude (claude-opus-5-5) acting as analyst in Claude Code session session_01C38XKmEv7rfcA4D9NgweVt — no engine API key configured",
+ "output": {
+  "effect": "material_change",
+  "proposedStatus": "STRENGTHENING",
+  "whyThisAltersJudgment": "The position depended on regulated buyers being able to move beyond pilots. For one regulated segment, US government, the new evidence removes two stated frictions: price (a 40% discount across every product surface and every level of government) and commitment (no minimum spend), through an existing GSA schedule, with a FedRAMP High offering that includes coding and agentic capabilities now generally available. That raises confidence in the public-sector part of the thesis. It does not satisfy V1: GSA provides a vehicle for others, and no individual organisation has publicly committed to organisation-wide coding-agent use. The usage figures are self-reported, and the source's legacy-code anecdotes failed verification, so the 'legacy modernisation as entry point' part is not strengthened. The IPO claims do not bear on the position.",
+  "conditionRefs": [
+   "V1"
+  ],
+  "citedClaimIds": [
+   "CLM-7F88BBDBB6D0",
+   "CLM-0AD19134AA8D",
+   "CLM-223ED7D401ED",
+   "CLM-7D4A2A33BD9E",
+   "CLM-55998EE5EDEA"
+  ],
+  "publicLine": "New vendor-reported evidence from US government — a 40% discount across every level of government with no minimum spend, and a FedRAMP High offering with coding capabilities now generally available — strengthens the public-sector part of this thesis. It does not meet the validation condition: no individual organisation has yet committed to organisation-wide coding-agent use, and the figures are self-reported."
+ }
+}

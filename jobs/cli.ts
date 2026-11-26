@@ -87,7 +87,14 @@ async function main() {
       if (!issue.content) throw new Error('no content');
       const prev = JSON.parse((await store.getText(preflightKey(issue.id, issue.content.version))) ?? 'null') as PreflightReport | null;
       const adv = prev?.checks.find((c) => c.id === 'adversarial_draft_check');
-      const pdf = prev?.checks.find((c) => c.id === 'pdf_preview_render');
+      let pdf = prev?.checks.find((c) => c.id === 'pdf_preview_render');
+      try {
+        const pv = await publishing.renderPreview(issue.id);
+        const missing = issue.content.sources.map((s) => s.url).filter((u) => !pv.pdfInfo.linkUris.includes(u));
+        pdf = { id: 'pdf_preview_render', passed: pv.pdfInfo.hasFonts && pv.pdfInfo.pages > 0 && !missing.length, severity: 'block', detail: `${pv.pdfInfo.pages} page(s), text fonts ${pv.pdfInfo.hasFonts ? 'present' : 'MISSING'}, ${pv.pdfInfo.linkUris.length} active links${missing.length ? `; citations missing from PDF: ${missing.join(', ')}` : '; every source cited in the PDF'}${pv.pdfInfo.isTagged ? ', tagged' : ''}` };
+      } catch (e) {
+        pdf = { id: 'pdf_preview_render', passed: false, severity: 'block', detail: `PDF generation failed: ${e instanceof Error ? e.message : String(e)}` };
+      }
       const report = await runEditorialPreflight(repo, issue.content, { fetcher: ctx.fetcher, liveLinkCheck: !!flags['live-links'], adversarialVerdict: undefined });
       // carry forward model-dependent checks from the stored report for this exact version
       report.checks = report.checks.filter((c) => c.id !== 'adversarial_draft_check');
