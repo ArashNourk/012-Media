@@ -7,7 +7,7 @@ export interface Fetcher {
   get(url: string): Promise<{ status: number; finalUrl: string; contentType: string; body: string }>;
 }
 
-export const USER_AGENT = '012-media-research/0.1 (+https://zeroonetwo.media/method)';
+export const USER_AGENT = '012-media-research/0.1 (+https://012.media/method)';
 
 export class HttpFetcher implements Fetcher {
   constructor(

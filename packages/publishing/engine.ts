@@ -9,10 +9,10 @@ import { formatLocalDate, isPublicationDay, sendGate } from './schedule';
 import { unsubscribeUrl } from './unsubscribe';
 
 export interface PublishingConfig {
-  siteUrl: string; // public site, e.g. https://zeroonetwo.media
+  siteUrl: string; // public site, e.g. https://012.media
   editionBaseUrl: string; // where unlisted HTML/PDF editions are served from
   publisherIdentity: string; // "012 MEDIA · <postal address>" (CASL sender identification)
-  fromAddress: string; // e.g. "012 MEDIA <brief@zeroonetwo.media>"
+  fromAddress: string; // e.g. "012 MEDIA <brief@012.media>"
   replyTo?: string;
   unsubscribeSecret: string;
   unlistedUrlSecret: string;
@@ -30,8 +30,8 @@ export function configFromEnv(env: NodeJS.ProcessEnv = process.env): PublishingC
     return v;
   };
   return {
-    siteUrl: env.SITE_URL ?? 'https://zeroonetwo.media',
-    editionBaseUrl: env.EDITION_BASE_URL ?? 'https://zeroonetwo.media/e',
+    siteUrl: env.SITE_URL ?? 'https://012.media',
+    editionBaseUrl: env.EDITION_BASE_URL ?? 'https://012.media/e',
     publisherIdentity: need('PUBLISHER_IDENTITY'),
     fromAddress: need('MAIL_FROM'),
     replyTo: env.MAIL_REPLY_TO,

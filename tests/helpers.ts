@@ -61,10 +61,10 @@ export function adapters(): SourceAdapter[] {
 
 export function testPublishingConfig(over: Partial<PublishingConfig> = {}): PublishingConfig {
   return {
-    siteUrl: 'https://zeroonetwo.media',
-    editionBaseUrl: 'https://zeroonetwo.media/e',
+    siteUrl: 'https://012.media',
+    editionBaseUrl: 'https://012.media/e',
     publisherIdentity: '012 MEDIA · Test Sender Identity, 1 Example Street, Toronto ON',
-    fromAddress: '012 MEDIA <brief@zeroonetwo.media>',
+    fromAddress: '012 MEDIA <brief@012.media>',
     unsubscribeSecret: 'test-unsubscribe-secret-0123456789',
     unlistedUrlSecret: 'test-unlisted-secret',
     testRecipientsOnly: false,

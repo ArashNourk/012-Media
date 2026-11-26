@@ -1,0 +1,53 @@
+# Render Blueprint for 012.media (https://render.com/docs/blueprint-spec).
+# One Docker web service with a persistent disk: SQLite database, research
+# store, rendered editions and the scheduler live in one process.
+services:
+  - type: web
+    name: 012-media
+    runtime: docker
+    plan: starter            # persistent disks require a paid instance
+    region: ohio
+    numInstances: 1          # SQLite + in-process scheduler: keep a single instance
+    healthCheckPath: /healthz
+    disk:
+      name: data
+      mountPath: /var/data
+      sizeGB: 5
+    domains:
+      - 012.media
+      - www.012.media
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+      - key: SITE_URL
+        value: https://012.media
+      - key: EDITION_BASE_URL
+        value: https://012.media/e
+      - key: TRUST_PROXY
+        value: "true"
+      - key: MAILER
+        value: resend
+      - key: MAIL_FROM
+        value: "012 MEDIA <brief@012.media>"
+      - key: ENABLE_SCHEDULER
+        value: "true"
+      - key: ENABLE_RESEARCH
+        value: "false"       # turn on once ANTHROPIC_API_KEY and source access are configured
+      - key: TEST_RECIPIENTS_ONLY
+        value: "true"        # switch to "false" at launch
+      - key: FORM_SECRET
+        generateValue: true
+      - key: UNSUBSCRIBE_SECRET
+        generateValue: true
+      - key: UNLISTED_URL_SECRET
+        generateValue: true
+      - key: PUBLISHER_IDENTITY
+        sync: false          # e.g. "012 MEDIA · <legal entity>, <postal address>" (CASL)
+      - key: CONTACT_EMAIL
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false

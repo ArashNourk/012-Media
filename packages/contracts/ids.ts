@@ -21,6 +21,7 @@ export const ID_PREFIX = {
   dispatch: 'DSP',
   delivery: 'DLV',
   subscriber: 'SUB',
+  application: 'APP',
   llmCall: 'LLM',
   audit: 'AUD',
 } as const;

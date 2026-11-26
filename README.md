@@ -1,10 +1,21 @@
-# 012 MEDIA — 012 Intelligence Engine
+# 012 MEDIA — 012.media
 
-Implementation of the private research and publishing system behind **012 MEDIA**, specified by
+The public site **012.media** and the private research and publishing system behind **012 MEDIA**, specified by
 [`docs/012_MEDIA_Product_Vision_and_PRD_v1.1.md`](docs/012_MEDIA_Product_Vision_and_PRD_v1.1.md) (authoritative product requirements) and
 [`docs/012_Intelligence_Engine_Architecture_v1.md`](docs/012_Intelligence_Engine_Architecture_v1.md) (normative technical companion).
 
-> Status: the engine, ledger, review and publishing pipeline are implemented and tested, and one grounded dry run on live sources has reached `DRAFTED` and is awaiting editor approval (see [`docs/DRY_RUN_2026-11-26.md`](docs/DRY_RUN_2026-11-26.md)). The public website and invitation journey (PRD milestones 1–2) are **not** in this change. Nothing is deployed.
+> Status: the website and invitation journey, the engine, ledger, review and publishing pipeline are implemented and tested. One grounded dry run on live sources has reached `DRAFTED` and awaits editor approval ([`docs/DRY_RUN_2026-11-26.md`](docs/DRY_RUN_2026-11-26.md)). **Nothing is deployed** — see [`docs/DEPLOY.md`](docs/DEPLOY.md) and [`docs/LAUNCH_CHECKLIST.md`](docs/LAUNCH_CHECKLIST.md).
+
+## Website (`apps/web`)
+
+`/` landing page and access form · `/brief` · `/method` · `/about` · `/privacy` · `/request` (no-JavaScript form) · `/verify` · `/unsubscribe` · `/e/…` unlisted editions. Server-rendered HTML, one stylesheet, one small script, self-hosted Manrope (OFL), no cookies, no third-party requests, strict CSP. The invitation journey lives in `packages/access` (validation, consent record, email confirmation, review, founding seats, welcome email). Screenshots at the seven required widths: [`docs/screenshots/`](docs/screenshots/).
+
+```bash
+npm run dev                                   # http://localhost:3000 (set SITE_URL=http://localhost:3000)
+npm run screenshots                           # BASE_URL=… ; responsive checks + screenshots
+npm run 012 -- applications:list --status pending_review
+npm run 012 -- applications:approve --id APP-… --reviewer "Name"
+```
 
 ## Canonical systems
 
@@ -44,7 +55,7 @@ PUBLISHING      approval locks a hashed snapshot → render from snapshot → se
 
 ```bash
 npm install
-npm test                      # 55 tests: the spec's §12 matrix + PRD negative tests
+npm test                      # 68 tests: spec §12 matrix, PRD negative tests, access journey, site + browser journey
 npm run typecheck
 cp .env.example .env          # fill in for real runs
 npm run 012                   # list operator commands

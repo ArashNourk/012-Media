@@ -16,6 +16,8 @@ import { buildManifest } from '../packages/review/manifest';
 import { runEditorialPreflight, type PreflightReport } from '../packages/review/preflight';
 import { torontoParts } from '../packages/publishing/schedule';
 import { createDeps } from './deps';
+import { METHOD_REFERENCES } from '../apps/web/views/pages';
+import type { ApplicationStatus } from '../packages/access/service';
 
 function parse(argv: string[]) {
   const [cmd, ...rest] = argv;
@@ -39,7 +41,7 @@ const str = (v: unknown, name: string): string => {
 async function main() {
   const { cmd, flags } = parse(process.argv.slice(2));
   const deps = createDeps();
-  const { ctx, publishing, store } = deps;
+  const { ctx, publishing, store, access } = deps;
   const repo = ctx.repo;
   const out = (x: unknown) => console.log(typeof x === 'string' ? x : JSON.stringify(x, null, 2));
 
@@ -161,6 +163,70 @@ async function main() {
       });
     }
 
+    // ---------------------------------------------------------------- invitation review (private)
+    case 'applications:list': {
+      const status = typeof flags.status === 'string' ? (flags.status as ApplicationStatus) : undefined;
+      return out({
+        foundingSeatsTaken: access.foundingSeatsTaken(),
+        applications: access.listApplications(status).map((a) => ({ id: a.id, status: a.status, applied: a.applicationDate, verified: a.emailVerifiedAt, name: a.fullName, role: a.roleTitle, industry: a.industry, linkedin: a.linkedinUrl, email: a.email })),
+      });
+    }
+    case 'applications:approve': {
+      const r = await access.approve(str(flags.id, 'id'), str(flags.reviewer, 'reviewer'), (flags.note as string[] | undefined)?.join(' '));
+      return out({ approved: flags.id, subscriber: r.subscriberId, foundingSeat: r.seat });
+    }
+    case 'applications:decline':
+      access.decline(str(flags.id, 'id'), str(flags.reviewer, 'reviewer'), (flags.note as string[] | undefined)?.join(' '));
+      return out({ declined: flags.id });
+    case 'applications:waitlist':
+      access.waitlist(str(flags.id, 'id'), str(flags.reviewer, 'reviewer'), (flags.note as string[] | undefined)?.join(' '));
+      return out({ waitlisted: flags.id });
+    case 'applications:delete':
+      access.deleteApplication(str(flags.id, 'id'), str(flags.reviewer, 'reviewer'));
+      return out({ deleted: flags.id });
+    case 'applications:welcome':
+      await access.sendWelcome(str(flags.subscriber, 'subscriber'));
+      return out({ welcomeResent: flags.subscriber });
+    case 'applications:purge': {
+      // Retention (privacy notice): unconfirmed requests after 30 days; declined requests 12 months after decision.
+      const now = Date.now();
+      const purged: string[] = [];
+      for (const a of access.listApplications()) {
+        const unconfirmed = a.status === 'applied' && now - Date.parse(a.applicationDate) > 30 * 86_400_000;
+        const declined = a.status === 'declined' && a.reviewDate && now - Date.parse(a.reviewDate) > 365 * 86_400_000;
+        if (unconfirmed || declined) {
+          access.deleteApplication(a.id, 'retention');
+          purged.push(a.id);
+        }
+      }
+      return out({ purged });
+    }
+
+    // ---------------------------------------------------------------- public specimen (/brief)
+    case 'specimen:set': {
+      const issue = repo.getIssue(str(flags.issue, 'issue'));
+      if (!issue.approvedContent || !issue.htmlKey || !issue.pdfKey) throw new Error('only an editor-approved, rendered issue can be the public specimen');
+      repo.db.prepare(`INSERT OR REPLACE INTO site_settings (key, value, updated_at, updated_by) VALUES ('specimen_issue_id', ?, ?, ?)`).run(issue.id, repo.now(), str(flags.editor, 'editor'));
+      repo.audit(String(flags.editor), 'site.specimen_set', issue.id);
+      return out({ specimen: issue.id });
+    }
+    case 'specimen:clear':
+      repo.db.prepare(`DELETE FROM site_settings WHERE key = 'specimen_issue_id'`).run();
+      return out({ specimen: null });
+
+    case 'site:check-links': {
+      const results = [];
+      for (const r of METHOD_REFERENCES) {
+        try {
+          const res = await ctx.fetcher.get(r.url);
+          results.push({ url: r.url, status: res.status, finalUrl: res.finalUrl });
+        } catch (e) {
+          results.push({ url: r.url, error: e instanceof Error ? e.message : String(e) });
+        }
+      }
+      return out(results);
+    }
+
     case 'hash': {
       const issue = repo.getIssue(str(flags.issue, 'issue'));
       return out({ contentSha256: issue.content ? hashJson(issue.content) : null });
@@ -179,7 +245,15 @@ async function main() {
   subscriber:add-test --email a@b --consent-version v1 --verified
   unsubscribe --token <token>
   tick [--now ISO]   (--now only with the sandbox outbox)
-  status [--date YYYY-MM-DD]`);
+  status [--date YYYY-MM-DD]
+  applications:list [--status pending_review]
+  applications:approve --id APP-… --reviewer "Name" [--note "..."]
+  applications:decline | applications:waitlist --id APP-… --reviewer "Name" [--note "..."]
+  applications:delete --id APP-… --reviewer "Name"      (applicant deletion request)
+  applications:welcome --subscriber SUB-…               (resend welcome)
+  applications:purge                                    (retention rules)
+  specimen:set --issue ISS-… --editor "Name" | specimen:clear
+  site:check-links                                      (verify Method citations before launch)`);
   }
 }
 
