@@ -1,0 +1,26 @@
+{
+  "name": "012-media",
+  "version": "0.1.0",
+  "private": true,
+  "description": "012 MEDIA — 012 Intelligence Engine, 012 Continuity Ledger and 012 Publishing Engine",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "012": "node --disable-warning=ExperimentalWarning --import tsx jobs/cli.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.14.0",
+    "playwright": "1.63.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.7",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.1.2"
+  }
+}
